@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #F5F5F7;
+    --bg-elevated: #E8E8ED;
+    --bg-surface: #FFFFFF;
+    --text-primary: #1D1D1F;
+    --text-secondary: #1D1D1F;
+    --text-muted: #A1A1A6;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.08);
+  }
+
+  .dark {
+    --bg-primary: #0A0A0A;
+    --bg-elevated: #141414;
+    --bg-surface: #1A1A1A;
+    --text-primary: #F2F2F2;
+    --text-secondary: #B8B8B8;
+    --text-muted: #888888;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+
+  * {
+    @apply border-border-color;
+  }
+
+  body {
+    @apply bg-primary text-primary antialiased;
+    font-family: var(--font-poppins), system-ui, sans-serif;
+  }
+
+  ::selection {
+    @apply bg-accent-primary/30 text-white;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply backdrop-blur-xl border;
+    background-color: var(--glass-bg);
+    border-color: var(--glass-border);
+  }
+
+  .glass-hover {
+    @apply transition-colors duration-300;
+  }
+
+  .glass-hover:hover {
+    background-color: color-mix(in srgb, var(--glass-bg), rgba(255,255,255,0.05));
+  }
+
+  .dark .glass-hover:hover {
+    background-color: color-mix(in srgb, var(--glass-bg), rgba(255,255,255,0.05));
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D];
+  }
+
+  .gradient-border {
+    @apply border border-transparent bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D] bg-clip-border;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+
+  .bg-elevated {
+    background-color: var(--bg-elevated);
+  }
+
+  .bg-surface {
+    background-color: var(--bg-surface);
+  }
+
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .border-border-color {
+    border-color: var(--border-color);
+  }
+}
