@@ -1,24 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { TestimonialCard } from "./TestimonialCard";
 import { testimonials } from "@/lib/data/testimonials";
 
 export function TestimonialCarousel() {
-  const [isPaused, setIsPaused] = useState(false);
-
   return (
-    <div
-      className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-    >
+    <div className="flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
       <motion.div
         className="flex gap-6"
-        animate={isPaused ? { x: undefined } : { x: ["0%", "-50%"] }}
+        animate={{ x: ["0%", "-50%"] }}
         transition={{
-          duration: 50,
+          duration: 60,
           repeat: Infinity,
           ease: "linear",
           repeatType: "loop",

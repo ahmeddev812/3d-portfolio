@@ -113,8 +113,8 @@ export function Navigation() {
               transition={{ type: "spring", damping: 28, stiffness: 220 }}
               onClick={(e) => e.stopPropagation()}
               className={cn(
-                "w-full min-h-screen backdrop-blur-2xl flex flex-col items-center justify-start pt-16 gap-2 px-6",
-                "bg-primary/98"
+                "w-full min-h-screen flex flex-col items-center justify-start pt-16 gap-2 px-6",
+                "bg-primary"
               )}
               style={{ overscrollBehavior: "contain", WebkitOverflowScrolling: "touch" }}
             >

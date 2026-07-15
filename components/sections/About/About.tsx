@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView, useSpring, useMotionValueEvent } from "framer-motion";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
@@ -13,11 +13,19 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
   const count = useSpring(0, { stiffness: 60, damping: 20 });
-  if (isInView) count.set(value);
+  const [display, setDisplay] = useState(0);
+
+  useMotionValueEvent(count, "change", (latest) => {
+    setDisplay(Math.round(latest));
+  });
+
+  useEffect(() => {
+    if (isInView) count.set(value);
+  }, [isInView, value, count]);
 
   return (
     <span ref={ref}>
-      {Math.round(count.get())}{suffix}
+      {display}{suffix}
     </span>
   );
 }

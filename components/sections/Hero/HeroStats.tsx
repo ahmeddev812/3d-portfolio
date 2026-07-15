@@ -1,13 +1,24 @@
 "use client";
 
-import { motion, useSpring } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView, useSpring, useMotionValueEvent } from "framer-motion";
 import { siteConfig } from "@/lib/config/site";
 
 function AnimatedValue({ value }: { value: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true });
   const count = useSpring(0, { stiffness: 80, damping: 20 });
-  const display = Math.round(count.get());
+  const [display, setDisplay] = useState(0);
 
-  return <span>{display}</span>;
+  useMotionValueEvent(count, "change", (latest) => {
+    setDisplay(Math.round(latest));
+  });
+
+  useEffect(() => {
+    if (isInView) count.set(value);
+  }, [isInView, value, count]);
+
+  return <span ref={ref}>{display}</span>;
 }
 
 const STATS = [

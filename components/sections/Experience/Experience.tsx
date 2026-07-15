@@ -87,7 +87,7 @@ function TimelineItem({
         </div>
       </div>
 
-      <div className="md:w-1/2">
+      <div className="hidden md:flex md:w-1/2 md:justify-start">
         {!isLeft && (
           <GlassCard className="w-full p-6">
             <span className="text-xs font-medium text-accent-primary uppercase tracking-wider">
