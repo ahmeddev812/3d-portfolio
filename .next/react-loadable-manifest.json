@@ -1,0 +1,24 @@
+{
+  "components\\3d\\HeroScene.tsx -> ./SceneContent": {
+    "id": 4132,
+    "files": [
+      "static/chunks/b536a0f1.570d8c271762af5c.js",
+      "static/chunks/bd904a5c.36c992c454f4c612.js",
+      "static/chunks/b79b7286.cc8bad25dded9f3c.js",
+      "static/chunks/737.79645775e9b69c23.js",
+      "static/chunks/132.941fa99f9d479432.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 5139,
+    "files": [
+      "static/chunks/139.7a5a8e93a21948c1.js"
+    ]
+  },
+  "node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 1646,
+    "files": [
+      "static/chunks/646.f342b7cffc01feb0.js"
+    ]
+  }
+}
