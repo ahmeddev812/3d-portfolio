@@ -6,10 +6,10 @@ import { Float } from "@react-three/drei";
 import * as THREE from "three";
 
 const SHAPES = [
-  { type: "octahedron" as const, position: [4, 2.5, -5] as const, color: "#FF6B9D", scale: 0.5 },
-  { type: "dodecahedron" as const, position: [-4, -2, -6] as const, color: "#00D4FF", scale: 0.55 },
-  { type: "icosahedron" as const, position: [0, -3, -7] as const, color: "#FFD93D", scale: 0.45 },
-  { type: "tetrahedron" as const, position: [-3, 3, -5] as const, color: "#7C3AED", scale: 0.5 },
+  { type: "octahedron" as const, position: [4, 2.5, -5] as const, color: "#3B82F6", scale: 0.5 },
+  { type: "dodecahedron" as const, position: [-4, -2, -6] as const, color: "#38BDF8", scale: 0.55 },
+  { type: "icosahedron" as const, position: [0, -3, -7] as const, color: "#60A5FA", scale: 0.45 },
+  { type: "tetrahedron" as const, position: [-3, 3, -5] as const, color: "#06B6D4", scale: 0.5 },
 ];
 
 function ShapeRenderer({ shape, index }: { shape: typeof SHAPES[number]; index: number }) {
@@ -31,9 +31,9 @@ function ShapeRenderer({ shape, index }: { shape: typeof SHAPES[number]; index: 
           clearcoat={1}
           clearcoatRoughness={0.05}
           transparent
-          opacity={0.6}
+          opacity={0.5}
           emissive={shape.color}
-          emissiveIntensity={0.08}
+          emissiveIntensity={0.04}
           flatShading
         />
       </mesh>

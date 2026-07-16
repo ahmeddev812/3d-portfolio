@@ -28,10 +28,10 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
 }
 
 const GITHUB_STATS = [
-  { icon: Github, label: "Repositories", value: 25, suffix: "+", color: "#6C63FF" },
-  { icon: Star, label: "Stars Earned", value: 120, suffix: "+", color: "#FFD93D" },
-  { icon: GitCommit, label: "Contributions", value: 500, suffix: "+", color: "#FF6B9D" },
-  { icon: GitFork, label: "Forks", value: 45, suffix: "+", color: "#00D4FF" },
+  { icon: Github, label: "Repositories", value: 25, suffix: "+", color: "#3B82F6" },
+  { icon: Star, label: "Stars Earned", value: 120, suffix: "+", color: "#60A5FA" },
+  { icon: GitCommit, label: "Contributions", value: 500, suffix: "+", color: "#38BDF8" },
+  { icon: GitFork, label: "Forks", value: 45, suffix: "+", color: "#06B6D4" },
 ];
 
 const LANGUAGES = [

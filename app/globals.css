@@ -16,11 +16,11 @@
   }
 
   .dark {
-    --bg-primary: #0A0A0A;
-    --bg-elevated: #141414;
-    --bg-surface: #1A1A1A;
-    --text-primary: #F2F2F2;
-    --text-secondary: #B8B8B8;
+    --bg-primary: #020617;
+    --bg-elevated: #0F172A;
+    --bg-surface: #111827;
+    --text-primary: #F8FAFC;
+    --text-secondary: #CBD5E1;
     --text-muted: #888888;
     --border-color: rgba(255, 255, 255, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.06);
@@ -65,11 +65,15 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#38BDF8];
   }
 
   .gradient-border {
-    @apply border border-transparent bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D] bg-clip-border;
+    @apply border border-transparent bg-gradient-to-r from-[#3B82F6] to-[#38BDF8] bg-clip-border;
+  }
+
+  .text-shadow-hero {
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
   }
 
   .section-padding {

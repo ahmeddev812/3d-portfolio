@@ -19,7 +19,7 @@ const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(
         viewport={{ once: true, margin: "-50px" }}
         whileHover={
           hover
-            ? { y: -8, boxShadow: "0 20px 40px rgba(108,99,255,0.15)", transition: { type: "spring", stiffness: 300, damping: 15 } }
+            ? { y: -8, boxShadow: "0 20px 40px rgba(59,130,246,0.12)", transition: { type: "spring", stiffness: 300, damping: 15 } }
             : undefined
         }
         className={cn(

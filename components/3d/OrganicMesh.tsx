@@ -59,15 +59,15 @@ export function OrganicMesh() {
   return (
     <mesh ref={meshRef} geometry={geometry} scale={1.3}>
       <MeshDistortMaterial
-        color="#6C63FF"
+        color="#2563EB"
         metalness={0.1}
         roughness={0.2}
         clearcoat={0.9}
         clearcoatRoughness={0.1}
-        emissive="#6C63FF"
-        emissiveIntensity={0.15}
+        emissive="#2563EB"
+        emissiveIntensity={0.08}
         transparent
-        opacity={0.92}
+        opacity={0.78}
         distort={0.2}
         speed={1.5}
       />

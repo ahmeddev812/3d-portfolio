@@ -72,11 +72,11 @@ function TypewriterText({ text, delay = 0 }: { text: string; delay?: number }) {
 export function HeroText() {
   return (
     <div className="space-y-6">
-      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight text-primary">
+      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight text-white text-shadow-hero">
         <SplitText text={TITLE} delay={0.4} />
       </h1>
 
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D]">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#38BDF8]">
         <TypewriterText text={SUBTITLE} delay={1.5} />
       </h2>
 

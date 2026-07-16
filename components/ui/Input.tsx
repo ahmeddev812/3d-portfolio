@@ -23,7 +23,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           style={{
             background:
-              "linear-gradient(135deg, rgba(108,99,255,0.1), rgba(255,107,157,0.1))",
+              "linear-gradient(135deg, rgba(59,130,246,0.1), rgba(56,189,248,0.1))",
           }}
         />
         <input

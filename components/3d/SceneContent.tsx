@@ -21,7 +21,7 @@ function SceneLights() {
         intensity={isDark ? 0.8 : 1.2}
       />
       <pointLight position={[-10, -10, -10]} intensity={isDark ? 0.5 : 0.8} />
-      <pointLight position={[5, -5, 5]} intensity={isDark ? 0.3 : 0.5} color="#FF6B9D" />
+      <pointLight position={[5, -5, 5]} intensity={isDark ? 0.3 : 0.5} color="#3B82F6" />
       <Environment preset={isDark ? "night" : "city"} />
     </>
   );
@@ -51,8 +51,8 @@ export default function SceneContent() {
           scale={10}
           size={0.04}
           speed={0.2}
-          opacity={0.4}
-          color="#6C63FF"
+          opacity={0.3}
+          color="#60A5FA"
         />
       </Canvas>
     </div>

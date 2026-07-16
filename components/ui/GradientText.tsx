@@ -14,7 +14,7 @@ export function GradientText({
   return (
     <Component
       className={cn(
-        "bg-clip-text text-transparent bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D]",
+        "bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#38BDF8]",
         className
       )}
       {...props}

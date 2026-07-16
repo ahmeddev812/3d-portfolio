@@ -45,7 +45,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
       transition={{ delay: index * 0.1, duration: 0.5 }}
     >
       <GlassCard className="group h-full flex flex-col overflow-hidden p-0">
-        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-accent-primary/20 to-accent-secondary/20">
+        <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[#3B82F6]/10 to-[#38BDF8]/10">
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent" />
           <div className="absolute bottom-4 left-4 flex gap-2">
             {project.tags.slice(0, 3).map((tag) => (

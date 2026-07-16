@@ -24,20 +24,20 @@ export function TechGrid() {
         <planeGeometry args={[20, 20, 30, 30]} />
         <meshBasicMaterial
           ref={matRef}
-          color="#6C63FF"
+          color="#3B82F6"
           wireframe
           transparent
-          opacity={0.15}
+          opacity={0.12}
           depthWrite={false}
         />
       </mesh>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
         <planeGeometry args={[18, 18, 12, 12]} />
         <meshBasicMaterial
-          color="#00D4FF"
+          color="#38BDF8"
           wireframe
           transparent
-          opacity={0.06}
+          opacity={0.05}
           depthWrite={false}
         />
       </mesh>

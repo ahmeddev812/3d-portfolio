@@ -36,7 +36,7 @@ export function ProjectFilter({ active, onFilterChange }: ProjectFilterProps) {
           {active === filter.value && (
             <motion.div
               layoutId="activeFilter"
-              className="absolute inset-0 bg-gradient-to-r from-[#6C63FF] to-[#FF6B9D] rounded-full"
+              className="absolute inset-0 bg-gradient-to-r from-[#3B82F6] to-[#38BDF8] rounded-full"
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />
           )}

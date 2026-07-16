@@ -4,7 +4,7 @@ import { useRef, useMemo, useState, useEffect } from "react";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-const COLORS = ["#6C63FF", "#FF6B9D", "#00D4FF", "#7C3AED", "#FFD93D"];
+const COLORS = ["#2563EB", "#3B82F6", "#38BDF8", "#06B6D4", "#60A5FA"];
 
 function CrystalShard({
   position,
@@ -50,10 +50,10 @@ function CrystalShard({
         clearcoat={1}
         clearcoatRoughness={0.05}
         transparent
-        opacity={0.8}
+        opacity={0.65}
         envMapIntensity={1.2}
         emissive={color}
-        emissiveIntensity={0.08}
+        emissiveIntensity={0.04}
         flatShading
       />
     </mesh>
@@ -115,8 +115,8 @@ export function CrystalCluster() {
 
     const hueShift = Math.sin(t * 0.15) * 0.05;
     const mat = mainRef.current.material as THREE.MeshPhysicalMaterial;
-    const base = new THREE.Color("#6C63FF");
-    const shift = new THREE.Color("#FF6B9D");
+    const base = new THREE.Color("#2563EB");
+    const shift = new THREE.Color("#3B82F6");
     mat.color.lerpColors(base, shift, (Math.sin(t * 0.3) + 1) / 2);
     mat.emissive.lerpColors(base, shift, (Math.sin(t * 0.3) + 1) / 2);
   });
@@ -125,16 +125,16 @@ export function CrystalCluster() {
     <group ref={groupRef}>
       <mesh ref={mainRef} geometry={mainGeo} scale={1.2}>
         <meshPhysicalMaterial
-          color="#6C63FF"
+          color="#2563EB"
           metalness={0.15}
           roughness={0.0}
           clearcoat={1}
           clearcoatRoughness={0.05}
           transparent
-          opacity={0.9}
+          opacity={0.75}
           envMapIntensity={1.5}
-          emissive="#6C63FF"
-          emissiveIntensity={0.12}
+          emissive="#2563EB"
+          emissiveIntensity={0.08}
           flatShading
         />
       </mesh>
