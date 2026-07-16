@@ -62,9 +62,12 @@ export function About() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3"
           >
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-primary">
+            {/* Updated H3 to match H2 gradient style */}
+            <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Building the future,{" "}
-              <span className="gradient-text">one line at a time</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#38BDF8]">
+                one line at a time
+              </span>
             </h3>
             <div className="space-y-4 text-text-secondary leading-relaxed">
               <p>
@@ -125,7 +128,7 @@ export function About() {
                   whileHover={{ y: -4 }}
                   className="glass rounded-xl p-5 text-center"
                 >
-                  <div className="text-2xl md:text-3xl font-bold gradient-text">
+                  <div className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#38BDF8]">
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                   </div>
                   <div className="text-xs text-text-muted mt-1">{stat.label}</div>
@@ -141,8 +144,11 @@ export function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-primary mb-2 text-center">
-            Journey & <span className="gradient-text">Achievements</span>
+          {/* Updated H3 to match H2 gradient style exactly */}
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 text-center">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#3B82F6] to-[#38BDF8]">
+              Journey & Achievements
+            </span>
           </h3>
           <p className="text-text-secondary text-center mb-10">
             Milestones that shaped my career

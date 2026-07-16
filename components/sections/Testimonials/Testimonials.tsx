@@ -28,7 +28,7 @@ export function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold"
+            className="text-2xl md:text-3xl lg:text-4xl font-bold"
           >
             {headingWords.map((word, i) => (
               <span key={word} className="inline-block overflow-hidden mr-[0.25em]">
