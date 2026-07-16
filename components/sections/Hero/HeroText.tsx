@@ -11,7 +11,7 @@ const SUBTITLE = [
 ];
 
 const DESCRIPTION =
-  "I build fast, scalable and visually engaging web applications with modern technologies, transforming ideas into seamless digital experiences.";
+  "Building fast, scalable and visually engaging web applications that transform ideas into seamless digital experiences.";
 
 function SplitText({
   text,
@@ -82,13 +82,14 @@ function TypewriterText({
 export function HeroText() {
   return (
     <div className="space-y-8">
-      {/* Main Heading */}
+
+      {/* Title */}
       <div>
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.45)]">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight text-primary">
           <SplitText text={TITLE[0]} delay={0.2} />
         </h1>
 
-        <h1 className="mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#DBEAFE] via-[#93C5FD] to-[#3B82F6] drop-shadow-[0_8px_35px_rgba(59,130,246,0.25)]">
+        <h1 className="mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight gradient-text ">
           <SplitText text={TITLE[1]} delay={0.6} />
         </h1>
       </div>
@@ -104,7 +105,7 @@ export function HeroText() {
               delay: 1.2 + index * 0.3,
               duration: 0.6,
             }}
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-secondary"
           >
             <TypewriterText
               text={line}
@@ -122,10 +123,11 @@ export function HeroText() {
           delay: 2.2,
           duration: 0.7,
         }}
-        className="max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-300"
+        className="max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-muted"
       >
         {DESCRIPTION}
       </motion.p>
+
     </div>
   );
 }
