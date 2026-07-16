@@ -3,12 +3,23 @@
 import { motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 
-const TITLE = "Hi, I'm Ahmed";
-const SUBTITLE = "Full Stack Developer & Creative Problem Solver";
-const DESCRIPTION =
-  "Building exceptional digital experiences that blend creativity with cutting-edge technology.";
+const TITLE = ["Hi, I'm", "Ahmed"];
 
-function SplitText({ text, delay = 0 }: { text: string; delay?: number }) {
+const SUBTITLE = [
+  "Full Stack Developer",
+  "Creative Problem Solver",
+];
+
+const DESCRIPTION =
+  "I build fast, scalable and visually engaging web applications with modern technologies, transforming ideas into seamless digital experiences.";
+
+function SplitText({
+  text,
+  delay = 0,
+}: {
+  text: string;
+  delay?: number;
+}) {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   if (prefersReducedMotion) {
@@ -17,27 +28,32 @@ function SplitText({ text, delay = 0 }: { text: string; delay?: number }) {
 
   return (
     <span className="inline-flex flex-wrap">
-      {text.split("").map((char, i) => (
+      {text.split(" ").map((word, index) => (
         <motion.span
-          key={i}
-          initial={{ y: 100, opacity: 0, rotateX: 20 }}
-          animate={{ y: 0, opacity: 1, rotateX: 0 }}
+          key={index}
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
           transition={{
-            delay: delay + i * 0.03,
-            type: "spring",
-            damping: 15,
-            stiffness: 100,
+            delay: delay + index * 0.18,
+            duration: 0.7,
+            ease: "easeOut",
           }}
-          className="inline-block"
+          className="mr-3 inline-block"
         >
-          {char === " " ? "\u00A0" : char}
+          {word}
         </motion.span>
       ))}
     </span>
   );
 }
 
-function TypewriterText({ text, delay = 0 }: { text: string; delay?: number }) {
+function TypewriterText({
+  text,
+  delay = 0,
+}: {
+  text: string;
+  delay?: number;
+}) {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   if (prefersReducedMotion) {
@@ -45,46 +61,68 @@ function TypewriterText({ text, delay = 0 }: { text: string; delay?: number }) {
   }
 
   return (
-    <span>
+    <>
       {text.split("").map((char, i) => (
         <motion.span
           key={i}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: delay + i * 0.04, duration: 0.05 }}
-          className="inline-block"
+          transition={{
+            delay: delay + i * 0.03,
+            duration: 0.05,
+          }}
         >
           {char}
         </motion.span>
       ))}
-      <motion.span
-        initial={{ opacity: 1 }}
-        animate={{ opacity: [1, 0, 1] }}
-        transition={{ repeat: Infinity, duration: 1, delay: delay + text.length * 0.04 }}
-        className="inline-block text-accent-primary ml-0.5"
-      >
-        |
-      </motion.span>
-    </span>
+    </>
   );
 }
 
 export function HeroText() {
   return (
-    <div className="space-y-6">
-      <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-tight text-white text-shadow-hero">
-        <SplitText text={TITLE} delay={0.4} />
-      </h1>
+    <div className="space-y-8">
+      {/* Main Heading */}
+      <div>
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight text-white drop-shadow-[0_6px_30px_rgba(0,0,0,0.45)]">
+          <SplitText text={TITLE[0]} delay={0.2} />
+        </h1>
 
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#3B82F6] to-[#38BDF8]">
-        <TypewriterText text={SUBTITLE} delay={1.5} />
-      </h2>
+        <h1 className="mt-2 text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#DBEAFE] via-[#93C5FD] to-[#3B82F6] drop-shadow-[0_8px_35px_rgba(59,130,246,0.25)]">
+          <SplitText text={TITLE[1]} delay={0.6} />
+        </h1>
+      </div>
 
+      {/* Subtitle */}
+      <div className="space-y-2">
+        {SUBTITLE.map((line, index) => (
+          <motion.h2
+            key={line}
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 1.2 + index * 0.3,
+              duration: 0.6,
+            }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white"
+          >
+            <TypewriterText
+              text={line}
+              delay={1.3 + index * 0.4}
+            />
+          </motion.h2>
+        ))}
+      </div>
+
+      {/* Description */}
       <motion.p
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 25 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 2.8, duration: 0.6 }}
-        className="text-text-secondary text-base sm:text-lg md:text-xl max-w-xl leading-relaxed"
+        transition={{
+          delay: 2.2,
+          duration: 0.7,
+        }}
+        className="max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-300"
       >
         {DESCRIPTION}
       </motion.p>
