@@ -46,6 +46,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
     >
       <GlassCard className="group h-full flex flex-col overflow-hidden p-0">
         <div className="relative h-48 overflow-hidden bg-gradient-to-br from-[#3B82F6]/10 to-[#38BDF8]/10">
+          {project.image && (
+            <img
+              src={project.image}
+              alt={project.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent" />
           <div className="absolute bottom-4 left-4 flex gap-2">
             {project.tags.slice(0, 3).map((tag) => (
