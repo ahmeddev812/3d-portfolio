@@ -1,4 +1,4 @@
-// File: E:\My Work\3d portfolio\app\(routes)\page.tsx
+// File: C:\Users\Administrator\Downloads\3d-portfolio-main\3d-portfolio-main\app\(routes)\page.tsx
 import * as entry from '../../../../app/(routes)/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
