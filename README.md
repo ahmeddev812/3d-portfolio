@@ -85,24 +85,4 @@ A modern, immersive **3D developer portfolio** built with Next.js 16, React Thre
 | **Analytics** | [Vercel Analytics](https://vercel.com/analytics) |
 | **Deployment** | [Vercel](https://vercel.com/) |
 
----
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- **Node.js** 20+
-- **npm** / **pnpm** / **yarn** / **bun**
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/ahmeddev812/3d-portfolio.git
-cd 3d-portfolio
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
